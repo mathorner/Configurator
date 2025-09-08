@@ -110,3 +110,5 @@ Want me to apply these tweaks now and optionally produce a “lean variant” of
 found out that closing the extension will lose chat history in the IDE mode :(
     seems to be a bug in the new extension
 
+### refactor
+Did well at changing the project name. I have experienced that this can be difficult in the past
