@@ -38,5 +38,29 @@ public class ApplicationsEndpointsTests
             a => Assert.Equal("App1", a.Name),
             a => Assert.Equal("App2", a.Name));
     }
-}
 
+    [Fact]
+    public async Task GetByIdAsync_Returns_NotFound_When_Missing()
+    {
+        var repo = new FakeApplicationRepository();
+
+        var result = await ApplicationsEndpoints.GetByIdAsync(123, repo, CancellationToken.None);
+
+        Assert.IsType<NotFound>(result.Result);
+    }
+
+    [Fact]
+    public async Task GetByIdAsync_Returns_Item_When_Found()
+    {
+        var now = DateTime.UtcNow;
+        var repo = new FakeApplicationRepository(
+            new Application { Id = 10, Name = "X", Description = null, CreatedUtc = now, UpdatedUtc = now }
+        );
+
+        var result = await ApplicationsEndpoints.GetByIdAsync(10, repo, CancellationToken.None);
+
+        var ok = Assert.IsType<Ok<Application>>(result.Result);
+        Assert.Equal(10, ok.Value!.Id);
+        Assert.Equal("X", ok.Value!.Name);
+    }
+}

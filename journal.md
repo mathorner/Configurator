@@ -104,3 +104,9 @@ Fix POST /configurations status codes as above.
 Clarify time strategy (DB defaults vs app-controlled UTC) and adjust plan accordingly.
 If you want the lean variant, I’ll update the plan to remove Services and co-locate DTOs with endpoints.
 Want me to apply these tweaks now and optionally produce a “lean variant” of the plan alongside the current one?
+
+
+### Codex VS Code extension
+found out that closing the extension will lose chat history in the IDE mode :(
+    seems to be a bug in the new extension
+

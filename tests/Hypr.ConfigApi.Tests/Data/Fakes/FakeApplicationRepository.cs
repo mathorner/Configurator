@@ -16,5 +16,10 @@ public sealed class FakeApplicationRepository : IApplicationRepository
     {
         return Task.FromResult(_apps);
     }
-}
 
+    public Task<Application?> GetByIdAsync(int id, CancellationToken ct = default)
+    {
+        var app = _apps.FirstOrDefault(a => a.Id == id);
+        return Task.FromResult(app);
+    }
+}

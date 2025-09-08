@@ -13,6 +13,9 @@ public static class ApplicationsEndpoints
         group.MapGet("", GetAllAsync)
              .WithName("GetApplications");
 
+        group.MapGet("/{id:int}", GetByIdAsync)
+             .WithName("GetApplicationById");
+
         return app;
     }
 
@@ -21,5 +24,13 @@ public static class ApplicationsEndpoints
     {
         var apps = await repo.GetAllAsync(ct);
         return TypedResults.Ok(apps);
+    }
+
+    public static async Task<Results<Ok<Application>, NotFound>> GetByIdAsync(int id, IApplicationRepository repo, CancellationToken ct)
+    {
+        var app = await repo.GetByIdAsync(id, ct);
+        return app is null
+            ? TypedResults.NotFound()
+            : TypedResults.Ok(app);
     }
 }

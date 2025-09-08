@@ -13,5 +13,10 @@ public sealed class ApplicationRepository : IApplicationRepository
         IReadOnlyList<Application> result = _apps;
         return Task.FromResult(result);
     }
-}
 
+    public Task<Application?> GetByIdAsync(int id, CancellationToken ct = default)
+    {
+        var app = _apps.FirstOrDefault(a => a.Id == id);
+        return Task.FromResult(app);
+    }
+}
