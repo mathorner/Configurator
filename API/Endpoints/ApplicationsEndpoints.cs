@@ -1,8 +1,8 @@
-using Hypr.ConfigApi.Data;
-using Hypr.ConfigApi.Domain;
+using Configurator.API.Data;
+using Configurator.API.Domain;
 using Microsoft.AspNetCore.Http.HttpResults;
 
-namespace Hypr.ConfigApi.Endpoints;
+namespace Configurator.API.Endpoints;
 
 public static class ApplicationsEndpoints
 {
@@ -34,3 +34,4 @@ public static class ApplicationsEndpoints
             : TypedResults.Ok(app);
     }
 }
+

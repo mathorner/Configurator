@@ -1,4 +1,4 @@
-namespace Hypr.ConfigApi.Domain;
+namespace Configurator.API.Domain;
 
 public sealed class Application
 {

@@ -1,7 +1,7 @@
-using Hypr.ConfigApi.Data;
-using Hypr.ConfigApi.Domain;
+using Configurator.API.Data;
+using Configurator.API.Domain;
 
-namespace Hypr.ConfigApi.Tests.Data.Fakes;
+namespace API.Tests.Data.Fakes;
 
 public sealed class FakeApplicationRepository : IApplicationRepository
 {

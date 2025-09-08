@@ -1,6 +1,6 @@
-using Hypr.ConfigApi.Domain;
+using Configurator.API.Domain;
 
-namespace Hypr.ConfigApi.Data;
+namespace Configurator.API.Data;
 
 // Temporary in-memory repository to bootstrap the first endpoint.
 // This will be replaced with a MySQL-backed implementation later.
@@ -20,3 +20,4 @@ public sealed class ApplicationRepository : IApplicationRepository
         return Task.FromResult(app);
     }
 }
+

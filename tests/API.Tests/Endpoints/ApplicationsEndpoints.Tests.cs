@@ -1,10 +1,10 @@
-using Hypr.ConfigApi.Domain;
-using Hypr.ConfigApi.Endpoints;
-using Hypr.ConfigApi.Tests.Data.Fakes;
+using Configurator.API.Domain;
+using Configurator.API.Endpoints;
+using API.Tests.Data.Fakes;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Xunit;
 
-namespace Hypr.ConfigApi.Tests.Endpoints;
+namespace API.Tests.Endpoints;
 
 public class ApplicationsEndpointsTests
 {

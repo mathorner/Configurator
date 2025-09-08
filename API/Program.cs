@@ -1,6 +1,6 @@
 using Microsoft.OpenApi.Models;
-using Hypr.ConfigApi.Endpoints;
-using Hypr.ConfigApi.Data;
+using Configurator.API.Endpoints;
+using Configurator.API.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -8,7 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
 {
-    c.SwaggerDoc("v1", new OpenApiInfo { Title = "Hypr Config API", Version = "v1" });
+    c.SwaggerDoc("v1", new OpenApiInfo { Title = "Configurator API", Version = "v1" });
 });
 
 // Temporary in-memory repository to bootstrap the first endpoint

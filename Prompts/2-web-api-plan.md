@@ -38,24 +38,24 @@
 **File/Folder Structure**
 
 - Solution
-  - `Hypr.ConfigApi.sln`
-  - `src/Hypr.ConfigApi/Program.cs`
-  - `src/Hypr.ConfigApi/appsettings.json`
-  - `src/Hypr.ConfigApi/Endpoints/ApplicationsEndpoints.cs`
-  - `src/Hypr.ConfigApi/Endpoints/ConfigurationsEndpoints.cs`
-  - `src/Hypr.ConfigApi/Domain/Application.cs`
-  - `src/Hypr.ConfigApi/Domain/Configuration.cs`
-  - `src/Hypr.ConfigApi/Data/IApplicationRepository.cs`
-  - `src/Hypr.ConfigApi/Data/IConfigurationRepository.cs`
-  - `src/Hypr.ConfigApi/Data/ApplicationRepository.cs`
-  - `src/Hypr.ConfigApi/Data/ConfigurationRepository.cs`
-  - `src/Hypr.ConfigApi/Infrastructure/IDbConnectionFactory.cs`
-  - `src/Hypr.ConfigApi/Infrastructure/MySqlConnectionFactory.cs`
+  - `Configurator.sln`
+  - `API/Program.cs`
+  - `API/appsettings.json`
+  - `API/Endpoints/ApplicationsEndpoints.cs`
+  - `API/Endpoints/ConfigurationsEndpoints.cs`
+  - `API/Domain/Application.cs`
+  - `API/Domain/Configuration.cs`
+  - `API/Data/IApplicationRepository.cs`
+  - `API/Data/IConfigurationRepository.cs`
+  - `API/Data/ApplicationRepository.cs`
+  - `API/Data/ConfigurationRepository.cs`
+  - `API/Infrastructure/IDbConnectionFactory.cs`
+  - `API/Infrastructure/MySqlConnectionFactory.cs`
   - `database/sql/001_init.sql`
-  - `tests/Hypr.ConfigApi.Tests/Endpoints/ApplicationsEndpoints.Tests.cs`
-  - `tests/Hypr.ConfigApi.Tests/Endpoints/ConfigurationsEndpoints.Tests.cs`
-  - `tests/Hypr.ConfigApi.Tests/Data/Fakes/FakeApplicationRepository.cs`
-  - `tests/Hypr.ConfigApi.Tests/Data/Fakes/FakeConfigurationRepository.cs`
+  - `tests/API.Tests/Endpoints/ApplicationsEndpoints.Tests.cs`
+  - `tests/API.Tests/Endpoints/ConfigurationsEndpoints.Tests.cs`
+  - `tests/API.Tests/Data/Fakes/FakeApplicationRepository.cs`
+  - `tests/API.Tests/Data/Fakes/FakeConfigurationRepository.cs`
 
 **Validation & Rules**
 
@@ -116,6 +116,6 @@
 - Connection string: `ConnectionStrings:Default` (e.g., `Server=localhost;Port=3306;Database=hypr_config;User ID=...;Password=...;SslMode=None;`)
 - Environment: `ASPNETCORE_ENVIRONMENT=Development` to enable Swagger
 - Apply schema: `mysql -u <user> -p <password> < hypr_config < database/sql/001_init.sql`
-- Run API: `dotnet run --project src/Hypr.ConfigApi`
+- Run API: `dotnet run --project API`
 - Run tests: `dotnet test`
  
