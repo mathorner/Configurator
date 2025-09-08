@@ -1,0 +1,13 @@
+# Build outputs
+**/bin/
+**/obj/
+
+# IDE caches
+.vs/
+
+# Test artifacts
+TestResults/
+
+# OS files
+.DS_Store
+Thumbs.db
