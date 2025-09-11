@@ -29,9 +29,21 @@ public static class ApplicationsEndpoints
     public static async Task<Results<Ok<Application>, NotFound>> GetByIdAsync(int id, IApplicationRepository repo, CancellationToken ct)
     {
         var app = await repo.GetByIdAsync(id, ct);
+
+        // Temporary hardcoded item for dev UI: return a sample application when id == 1.
+        if (app is null && id == 1)
+        {
+            app = new Application
+            {
+                Id = 1,
+                Name = "Demo Application",
+                Description = "Hardcoded sample returned for dev",
+                CreatedUtc = DateTime.UtcNow.AddDays(-1),
+                UpdatedUtc = DateTime.UtcNow
+            };
+        }
         return app is null
             ? TypedResults.NotFound()
             : TypedResults.Ok(app);
     }
 }
-
