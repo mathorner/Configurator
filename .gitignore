@@ -11,3 +11,8 @@ TestResults/
 # OS files
 .DS_Store
 Thumbs.db
+
+# Node artifacts
+node_modules/
+**/node_modules/
+**/dist/
