@@ -11,3 +11,6 @@ TestResults/
 # OS files
 .DS_Store
 Thumbs.db
+
+# Node dependencies
+UI/package-lock.json
