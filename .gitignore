@@ -12,5 +12,7 @@ TestResults/
 .DS_Store
 Thumbs.db
 
-# Node dependencies
-UI/package-lock.json
+# Node artifacts
+node_modules/
+**/node_modules/
+**/dist/
